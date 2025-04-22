@@ -92,7 +92,7 @@ a:hover {
     color: #FFA347;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     .menu-icon {
         display: block;
     }
@@ -128,7 +128,7 @@ a:hover {
     }
 
     .logo-text {
-        font-size: 10px;
+        font-size: 15px;
         font-weight: 700;
         line-height: 50px;
         cursor: default;
@@ -215,7 +215,7 @@ main {
     color: #FFF;
 }
   
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .hero-content {
         z-index: 2;
         margin: auto;
@@ -249,7 +249,7 @@ main {
         background-color: #e59200;
         color: #FFF;
     }
-}
+} */
 
 @media screen and (max-width: 480px) {
     .hero-content {
