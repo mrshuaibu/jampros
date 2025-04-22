@@ -337,6 +337,10 @@ main {
 } */
 
 @media screen and (max-width: 480px) {
+    .hero {
+        min-height: 100svh;
+    }
+
     .hero-content {
         z-index: 2;
         margin: auto;
