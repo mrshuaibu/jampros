@@ -295,7 +295,7 @@ main {
   
 .service-icon {
     font-size: 32px;
-    color: #00bcd4;
+    color: var(--app-button-color);
     margin-bottom: 15px;
 }  
 
