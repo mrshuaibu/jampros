@@ -17,6 +17,37 @@ html {
     font-size: 62.5%;
 }
 
+/* Font utility classes */
+.roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+.orbitron {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 500;
+}
+
+.kanit {
+    font-family: 'Kanit', sans-serif;
+    font-weight: 400;
+}
+
+/* Optional: Target specific tags with fonts */
+h1, h2, h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 500;
+}
+
+p, a, li, span {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* For more creative style */
+.hero-content h1 {
+    font-family: 'Kanit', sans-serif;
+    font-weight: 700;
+}
+
 .container {
     width: min(100% - 30px, 1200px);
     margin-inline: auto;
@@ -202,8 +233,7 @@ main {
 .btn {
     display: inline-block;
     padding: 12px 24px;
-    background-color: var(--app-button-color);
-    color: #fff;
+    background: linear-gradient(to right, #00d4ff, #0055ff);
     text-decoration: none;
     border-radius: 8px;
     font-weight: bold;
@@ -211,8 +241,8 @@ main {
 }
   
 .btn:hover {
-    background-color: #e59200;
-    color: #FFF;
+    background: linear-gradient(to right, #0055ff, #00d4ff);
+    color: var(--app-font-color);
 }
   
 /* @media (max-width: 768px) {
