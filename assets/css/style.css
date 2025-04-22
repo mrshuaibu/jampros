@@ -170,7 +170,7 @@ main {
     min-height: 100svh;
   }
   
-  .hero::before {
+.hero::before {
     content: "";
     position: absolute;
     top: 0;
@@ -179,26 +179,27 @@ main {
     bottom: 0;
     background: rgba(0, 0, 0, 0.5); 
     z-index: 1;
-  }
+}
   
-  .hero-content {
+.hero-content {
     z-index: 2;
     margin: auto;
-  }
+}
   
-  .hero h1 {
+.hero h1 {
     font-size: 50px;
-  }
+    max-width: 800px;
+}
   
-  .hero p {
+.hero p {
     font-size: 25px;
     max-width: 800px;
     line-height: 2;
     margin-top: 15px;
     margin-bottom: 25px;
-  }
+}
   
-  .btn {
+.btn {
     display: inline-block;
     padding: 12px 24px;
     background-color: var(--app-button-color);
@@ -207,18 +208,83 @@ main {
     border-radius: 8px;
     font-weight: bold;
     transition: background 0.3s ease;
-  }
+}
   
-  .btn:hover {
+.btn:hover {
     background-color: #e59200;
     color: #FFF;
-  }
+}
   
-  @media (max-width: 768px) {
-
+@media (max-width: 768px) {
+    .hero-content {
+        z-index: 2;
+        margin: auto;
+    }
+      
+    .hero h1 {
+        font-size: 30px;
+        max-width: 800px;
+    }
+      
+    .hero p {
+        font-size: 20px;
+        max-width: 800px;
+        line-height: 2;
+        margin-top: 15px;
+        margin-bottom: 25px;
+    }
+      
+    .btn {
+        display: inline-block;
+        padding: 12px 24px;
+        background-color: var(--app-button-color);
+        color: #fff;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: 600;
+        transition: background 0.3s ease;
+    }
+      
+    .btn:hover {
+        background-color: #e59200;
+        color: #FFF;
+    }
 }
 
 @media screen and (max-width: 480px) {
+    .hero-content {
+        z-index: 2;
+        margin: auto;
+    }
+      
+    .hero h1 {
+        font-size: 30px;
+        max-width: 800px;
+    }
+      
+    .hero p {
+        font-size: 20px;
+        max-width: 800px;
+        line-height: 2;
+        margin-top: 15px;
+        margin-bottom: 25px;
+    }
+      
+    .btn {
+        display: inline-block;
+        padding: 12px 24px;
+        background-color: var(--app-button-color);
+        color: #fff;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: 600;
+        transition: background 0.3s ease;
+    }
+      
+    .btn:hover {
+        background-color: #e59200;
+        color: #FFF;
+    }
 }
 
 /***************/
