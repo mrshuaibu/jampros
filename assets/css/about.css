@@ -1,0 +1,386 @@
+@charset "utf-8";
+@import url(./root.css);
+
+/*--------------------------------*/
+/*General Rules*/
+/*--------------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Nunito Sans', 'Open Sans', Arial, sans-serif;
+    font-size: 62.5%;
+}
+
+.container {
+    width: min(100% - 30px, 1080px);
+    margin-inline: auto;
+}
+
+.flex {
+    display: flex;
+}
+
+/* .bg {
+    background: #1a1a2e;
+    background: linear-gradient(to bottom right, rgb(55,33,167,255), rgb(195,66,156,255));
+} */
+
+.section-one {
+    padding: 50px 0;
+    background-color: #1a1a2e;
+}
+
+.section-two {
+    padding: 50px 0;
+    background-color: #23233e;
+}
+
+.grid-center {
+    display: grid;
+    place-items: center;
+}
+
+.flex-even {
+    justify-content: space-evenly;
+}
+
+/*--------------------------------*/
+/*Header*/
+/*--------------------------------*/
+
+header {
+    background-color: #2a2d43;
+}
+
+.menu-icon {
+    display: none;
+    line-height: 50px;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin:  5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--app-font-color);
+}
+
+.nav {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-list li {
+    line-height: 50px;
+    margin-left: 15px;
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--app-font-color);
+}
+
+a:hover {
+    color: var(--app-hover-cover);
+}
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .menu-icon.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-icon.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .menu-icon.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-list {
+        position: fixed;
+        left: -100%;
+        top: 50px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #1a1d28;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: left 0.3s ease-in-out;
+        z-index: 1000;
+    }  
+
+    .nav-list.active {
+        left: 0;
+    }
+
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 700;
+    cursor: default;
+}
+
+.main {
+    height: calc(100svh - 50px - 50px);
+}
+
+/*--------------------------------*/
+/* Mini Banner                    */
+/*--------------------------------*/
+
+.hero-banner {
+    position: relative;
+    height: calc(50svh - 65px);
+    background: rgb(255, 255, 255) url("../img/Advanced_1.jpg") center center / cover no-repeat;
+    line-height: calc(50svh - 65px);
+    z-index: 1;
+    overflow: hidden;
+  
+    h2 {
+      font-weight: 800;
+      font-size: 40px;
+      letter-spacing: 3px;
+      color: var(--app-font-color);
+    }
+}
+  
+.hero-banner::before {
+    position: absolute;
+    inset: 0 auto auto 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-color: rgb(0 0 0 / 50%);
+    z-index: -1;
+}
+
+/*--------------------------------*/
+/* body*/
+/*--------------------------------*/
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+header, footer {
+    height: 50px;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+/*--------------------------------*/
+/* Achievement Badges             */
+/*--------------------------------*/
+
+.achievements {
+    gap: 20px;
+    flex-wrap: wrap;
+}
+  
+.achieve-badge {
+    flex-direction: column;
+    flex: 0 0 auto;
+    width: calc(33.333333% - 13.333333px);
+    height: 280px;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    font-size: 17px;
+}
+  
+.award {
+    height: 150px;
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .one, .two {
+        width: calc(50% - 10px);
+    }
+
+    .three {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .achieve-badge {
+        width: 100%;
+    }
+}
+
+/*--------------------------------*/
+/* Articles                       */
+/*--------------------------------*/
+
+.write-ups {
+    font-size: 17px;
+    padding: 25px;
+    color: var(--app-font-color);
+}
+
+.first {
+    line-height: 1.5;
+    text-align: left;
+    font-size: 20px;
+}
+
+.sub-heading {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/*On smaller screen i want this to be like an FAQ secion where you click to expand*/
+
+/*--------------------------------*/
+/* Stats                          */
+/*--------------------------------*/
+
+.center {
+    justify-content: center;
+}
+
+.stat-title {
+    font-size: 25px;
+    color: var(--app-font-color);
+    margin-bottom: 10px;
+    text-align: center;
+}
+  
+.statistics {
+    gap: 20px;
+    flex-wrap: wrap; 
+}
+  
+.stat-item {
+    flex: 0 0 auto;
+    width: calc(25% - 20px);
+    height: 200px;
+    text-align: center;
+    align-content: center;
+    color: var(--app-font-color);
+    background: rgb(255 255 255 / 0.1); 
+    backdrop-filter: blur(10px);
+    border-radius: var(--app-box-radius);
+
+    i {
+        font-size: 20px
+    }
+
+    p {
+        font-size: 20px;
+    }
+}
+  
+.stat-number {
+    font-size: 30px;
+    color: var(--app-color-primary);
+    display: block;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .stat-item {
+        width: calc(50% - 10px);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .stat-item {
+        width: 100%;
+    }
+}
+
+/***************************************/
+/*sign up */
+/***************************************/
+.contact-us {
+    color: var(--app-font-color);
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+    width: 100%;
+}
+
+.contact-us a {
+    color: var(--app-hover-cover);
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #1a1a2e;
+}
+
+@media screen and (max-width: 768px) {
+    .contact-us {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contact-us {
+        font-size: 15px;
+    }
+}
+
+/******************************************/
+/*footer*/
+/******************************************/
+
+footer {
+    background-color: #2b1b47;
+    color: var(--app-font-color);
+}
+
+.footer {
+    justify-content: space-between;
+}
+
+.copyright {
+    height: 50px;
+    cursor: default;
+}
+
+p {
+    line-height: 50px; 
+}
+
+.social-list li {
+    line-height: 50px;
+    font-size: 20px;
+}
+
+.social-list li a {
+    margin-right: 15px;
+    color: var(--app-font-color);
+}
+
+.social-list li a:hover {
+    color: var(--app-hover-cover);
+}

@@ -1,0 +1,10 @@
+:root {
+    --app-font-color:	#fff;
+    --app-hover-cover: 	#E85D00;
+    --app-button-color: #FF6B00;
+    --app-box-color: rgb(230, 228, 237);
+    --app-frosted-color: rgb(255 255 255 / 0.1);
+    --app-button-radius: 50px;
+    --app-box-radius: 8px;
+    --app-box-shadow: 0px 0px 4px rgb(0 0 0 / 10%);
+  }
