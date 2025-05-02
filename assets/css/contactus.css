@@ -57,28 +57,13 @@ p, a, li, span {
     display: flex;
 }
 
-.bg {
-    background:#F9FAFB ;
-}
-
-
-.section-one {
-    padding: 50px 0;
-    background-color: #31374c;
-}
-
 .section-two {
     padding: 50px 0;
     background-color: #292e40;
 }
 
-.grid-center {
-    display: grid;
-    place-items: center;
-}
-
-.flex-even {
-    justify-content: space-evenly;
+.bg {
+    background:#F9FAFB ;
 }
 
 /********************/
@@ -195,8 +180,19 @@ a:hover {
     }
 }
 
-.main {
-    height: calc(100svh - 50px - 50px);
+/********************/
+/****** body ******/
+/********************/
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100svh;
+    margin: 0;
+}
+
+main {
+    min-height: 100svh;
 }
 
 /*--------------------------------*/
@@ -218,6 +214,7 @@ a:hover {
       line-height: calc(50svh - 65px);
       color: var(--app-font-color);
       width: 100%;
+      text-align: center;
     }
 }
   
@@ -231,151 +228,118 @@ a:hover {
     z-index: -1;
 }
 
-/*--------------------------------*/
-/* body*/
-/*--------------------------------*/
-
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
+/*******************************************/
+.contact-section {
+    padding: 4rem 1rem;
+    animation: fadeInUp 1s ease-in-out;
 }
 
-header, footer {
-    height: 50px;
-}
-
-main {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.contact-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--app-font-color);
     text-align: center;
+}
+
+.contact-subtitle {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 1.6rem;
+    color: var(--app-font-color);
+}
+
+.contact-grid {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contact-form {
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 1rem;
+    font-size: 1.4rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #002D62;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 45, 98, 0.3);
+}
+
+.contact-form textarea {
+    height: 120px;
+    resize: none;
+}
+
+.contact-form button {
+    padding: 1rem;
+    font-size: 1.6rem;
+    background-color: var(--app-button-color);
     color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
 }
 
-/*--------------------------------*/
-/* Articles                       */
-/*--------------------------------*/
+.contact-form button:hover {
+    background-color: #FFA347;
+}
 
-.write-ups {
-    font-size: 17px;
-    padding: 25px;
+.contact-details {
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    font-size: 1.6rem;
     color: var(--app-font-color);
 }
 
-.first {
-    line-height: 1.5;
-    text-align: left;
-    font-size: 20px;
+.contact-details i {
+    margin-right: 1rem;
+    color: var(--app-button-color);
 }
 
-.sub-heading {
-    font-size: 20px;
-    font-weight: 700;
-}
-
-/*On smaller screen i want this to be like an FAQ secion where you click to expand*/
-
-/*--------------------------------*/
-/* Stats                          */
-/*--------------------------------*/
-
-.center {
-    justify-content: center;
-}
-
-.stat-title {
-    font-size: 25px;
-    color: var(--app-font-color);
-    margin-bottom: 10px;
-    text-align: center;
-}
-  
-.statistics {
-    gap: 20px;
-    flex-wrap: wrap; 
-}
-  
-.stat-item {
-    flex: 0 0 auto;
-    width: calc(25% - 20px);
-    height: 200px;
-    text-align: center;
-    align-content: center;
-    color: var(--app-font-color);
-    background: rgb(255 255 255 / 0.1); 
-    backdrop-filter: blur(10px);
-    border-radius: var(--app-box-radius);
-
-    i {
-        font-size: 20px
+/* Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
     }
-
-    p {
-        font-size: 20px;
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
-}
-  
-.stat-number {
-    font-size: 30px;
-    color: var(--app-color-primary);
-    display: block;
-    margin-bottom: 10px;
 }
 
 @media screen and (max-width: 768px) {
-    .stat-item {
-        width: calc(50% - 10px);
+    .contact-grid {
+        flex-direction: column;
     }
 }
 
-@media screen and (max-width: 480px) {
-    .stat-item {
-        width: 100%;
-    }
-}
 
-/***************************************/
-/*sign up */
-/***************************************/
-.contact-us {
-    color: var(--app-font-color);
-    font-size: 25px;
-    font-weight: 600;
-    text-align: center;
-    width: 100%;
-}
-
-.contact-us a {
-    color: var(--app-hover-cover);
-    text-decoration: underline;
-}
-
-a:hover {
-    color: #FFA347;
-}
-
-@media screen and (max-width: 768px) {
-    .contact-us {
-        font-size: 20px;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .contact-us {
-        font-size: 15px;
-    }
-}
-
-/******************************************/
-/*footer*/
-/******************************************/
+/***************/
+/****footer*****/
+/***************/
 
 footer {
     background-color: 	#002D62;
-    color: var(--app-font-color);
+    color: 	#FFF;
 }
 
 .footer {
@@ -398,9 +362,10 @@ p {
 
 .social-list li a {
     margin-right: 15px;
-    color: var(--app-font-color);
+    color: 	#FFF;
 }
 
 .social-list li a:hover {
-    color: var(--app-hover-cover);
+    color: #FFA347;
 }
+
