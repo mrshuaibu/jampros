@@ -235,7 +235,6 @@ main {
 .btn {
     display: inline-block;
     padding: 12px 24px;
-    /* background-color: #0055ff; */
     background-color: var(--app-button-color);
     text-decoration: none;
     border-radius: 8px;
@@ -244,7 +243,6 @@ main {
 }
   
 .btn:hover {
-    /* background-color: #0048d8; */
     background-color: #e59200;
     color: var(--app-font-color);
 }
@@ -253,7 +251,6 @@ main {
 .services-section {
     padding: 60px 15px;
     text-align: left;
-    /* background-color: #1a1d28; */
     background-color: #292e40;
     color: var(--app-font-color);
 }
@@ -416,6 +413,10 @@ main {
     color: var(--app-font-color);
 }
 
+.smooth {
+    animation: fadeInUp 1s ease-in-out;
+}
+
 .team-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -427,8 +428,14 @@ main {
     background-color: #ffffff10;
     padding: 20px;
     border-radius: 12px;
-    box-shadow: 0 4px 8px rgb(0 0 0 / 0.05);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 0 15px rgb(0 0 0 /0.15);
+    transition: transform 0.3s ease;
     text-align: center;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
 }
 
 .team-img {
@@ -448,6 +455,65 @@ main {
 .team-desc {
     font-size: 20px;
     color: var(--app-font-color);
+}
+
+/***************************************/
+/*sign up */
+/***************************************/
+.contact-us {
+    background-color: #31374c;
+    color: var(--app-font-color);
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+    padding: 60px 15px;
+}
+
+.contact-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: var(--app-button-color);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.contact-btn:hover {
+    background-color: #e59200;
+    color: #FFF;
+}
+
+
+@media screen and (max-width: 768px) {
+    .contact-us {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contact-us {
+        font-size: 15px;
+    }
+}
+
+/* Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contact-grid {
+        flex-direction: column;
+    }
 }
 
 
