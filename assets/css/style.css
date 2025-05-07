@@ -442,7 +442,7 @@ main {
 .team-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 30px;
+    gap: 32px;
     margin-top: 40px;
 }
 
@@ -520,6 +520,13 @@ main {
         object-fit: cover;
         margin-bottom: 15px;
     }
+
+    .team-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 32px;
+        margin-top: 40px;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -533,6 +540,13 @@ main {
         border-radius: 50%;
         object-fit: cover;
         margin-bottom: 15px;
+    }
+
+    .team-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 32px;
+        margin-top: 40px;
     }
 }
 
