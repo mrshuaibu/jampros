@@ -331,11 +331,47 @@ main {
     .stat-item {
         width: calc(50% - 10px);
     }
+
+    .hero-banner {
+        position: relative;
+        height: calc(50svh - 65px);
+        background: rgb(255, 255, 255) url("../img/sunset.jpg") center center / cover no-repeat;
+        line-height: calc(50svh - 65px);
+        z-index: 1;
+        overflow: hidden;
+      
+        h2 {
+          font-weight: 800;
+          font-size: 40px;
+          letter-spacing: 3px;
+          line-height: calc(50svh - 65px);
+          color: var(--app-font-color);
+          width: 100%;
+        }
+    }
 }
 
 @media screen and (max-width: 480px) {
     .stat-item {
         width: 100%;
+    }
+
+    .hero-banner {
+        position: relative;
+        height: calc(50svh - 65px);
+        background: rgb(255, 255, 255) url("../img/sunset.jpg") center center / cover no-repeat;
+        line-height: calc(50svh - 65px);
+        z-index: 1;
+        overflow: hidden;
+      
+        h2 {
+          font-weight: 800;
+          font-size: 40px;
+          letter-spacing: 3px;
+          line-height: calc(50svh - 65px);
+          color: var(--app-font-color);
+          width: 100%;
+        }
     }
 }
 
