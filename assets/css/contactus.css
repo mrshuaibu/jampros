@@ -315,7 +315,7 @@ main {
 
 .contact-details i {
     margin-right: 1rem;
-    color: var(--app-button-color);
+    /* color: var(--app-button-color); */
 }
 
 /* Animation */
@@ -383,8 +383,31 @@ p {
     font-size: 20px;
 }
 
+.follow {
+    font-size: 50px;
+}
+
+.yt {
+    color: #FF0000;
+}
+
+.fb {
+    color: #1877F2;
+}
+
+.ig {
+    background: linear-gradient(45deg, #833AB4, #E1306C, #F56040);} 
+
+.lk {
+    color: #0A66C2;
+}
+
+.follow:hover {
+    color: #FFA347;
+}
+
 .social-list li a {
-    margin-right: 15px;
+    margin-right: 20px;
     color: 	#FFF;
 }
 
