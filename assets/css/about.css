@@ -134,6 +134,10 @@ header {
     cursor: pointer;
 }
 
+.home {
+    color: var(--app-button-color);
+}
+
 a {
     text-decoration: none;
     color: 	#FFF;

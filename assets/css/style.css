@@ -114,6 +114,10 @@ header {
     cursor: pointer;
 }
 
+.home {
+    color: var(--app-button-color);
+}
+
 a {
     text-decoration: none;
     color: 	#FFF;
@@ -390,7 +394,7 @@ main {
     }
 
     .hero p {
-        font-size: 18px;
+        font-size: 20px;
         line-height: 2;
         margin-bottom: 35px;
         text-align: center;
