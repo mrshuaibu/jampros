@@ -163,7 +163,7 @@ a:hover {
     }
 
     .logo-text {
-        font-size: 15px;
+        font-size: 20px;
         font-weight: 700;
         line-height: 50px;
         cursor: default;
@@ -172,7 +172,7 @@ a:hover {
 
 @media screen and (max-width: 480px) {
     .logo-text {
-        font-size: 10px;
+        font-size: 18px;
         font-weight: 500;
         line-height: 50px;
         cursor: default;
@@ -214,7 +214,7 @@ main {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgb(0 0 0 / 0.7); 
+    background: rgb(0 0 0 / 0.5); 
     z-index: 1;
 }
   
@@ -504,11 +504,27 @@ main {
     .contact-us {
         font-size: 20px;
     }
+
+    .team-img {
+        width: 65px;
+        height: 65px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 15px;
+    }
 }
 
 @media screen and (max-width: 480px) {
     .contact-us {
         font-size: 15px;
+    }
+
+    .team-img {
+        width: 65px;
+        height: 65px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 15px;
     }
 }
 
